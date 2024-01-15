@@ -125,3 +125,10 @@ const { p: foo, q: bar } = o;
 console.log(foo); // 42
 console.log(bar); // true
 ```
+
+## ✅ 프로토타입(Prototype)
+1. 모든 객체는 prototype에 대한 정보를 갖고있다.
+2. 생성자에서 접근할때는 prototype, 객체에서 접근할때는 __proto__
+3. [[Prototype]]은 사실 접근이 불가능한 객체라 접근을 하기위해 __proto__를 사용한다.  
+  
+✅ Prototype에 대한 이해가 부족해 다시 한번 학습이 필요
