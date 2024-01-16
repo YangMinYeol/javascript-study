@@ -127,30 +127,39 @@ console.log(bar); // true
 ```
 
 ## ✅ 프로토타입(Prototype)
+
 1. 모든 객체는 prototype에 대한 정보를 갖고있다.
-2. 생성자에서 접근할때는 prototype, 객체에서 접근할때는 __proto__
-3. [[Prototype]]은 사실 접근이 불가능한 객체라 접근을 하기위해 __proto__를 사용한다.  
-  
+2. 생성자에서 접근할때는 prototype, 객체에서 접근할때는 **proto**
+3. [[Prototype]]은 사실 접근이 불가능한 객체라 접근을 하기위해 **proto**를 사용한다.
+
 ✅ Prototype에 대한 이해가 부족해 다시 한번 학습이 필요
 
 ## 이벤트 리스너
+
 1. 이벤트를 등록하는 방법은 3가지가있다.
-  1. html코드에 직접 삽입 하는방법
-  ~~~
-    <button onclick="clickEvent"/>
-  ~~~
-  2. js코드에 직접 이벤트를 적는 방법
-  ~~~
-    document.querySelector("button").onclick = clickEvent;
-  ~~~
-  3. addEventListener를 사용하는 방법
-  ~~~
-    document.querySelector("button").addEventListener("click", cliekEvent);
-  ~~~
-- 1번은 HTML코드와 JS코드가 같이있어 유지보수에도 좋지못하고 혼란을가져온다. 
+1. html코드에 직접 삽입 하는방법
+
+```
+  <button onclick="clickEvent"/>
+```
+
+2. js코드에 직접 이벤트를 적는 방법
+
+```
+  document.querySelector("button").onclick = clickEvent;
+```
+
+3. addEventListener를 사용하는 방법
+
+```
+  document.querySelector("button").addEventListener("click", cliekEvent);
+```
+
+- 1번은 HTML코드와 JS코드가 같이있어 유지보수에도 좋지못하고 혼란을가져온다.
 - 2번은 이벤트를 한번에 한개만 추가가능하여 권장하지 않는다.
 - 3번은 이벤트도 여러개 추가 가능하고 제거도 가능하여 권장한다.
 
 ## Script
+
 1. 스크립트 파일을 동적으로 추가가 가능하다.
-> 하지만 노출이 쉽게되기때문에 신중하게 사용해야한다.
+   > 하지만 노출이 쉽게되기때문에 신중하게 사용해야한다.
