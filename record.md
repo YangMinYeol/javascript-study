@@ -223,3 +223,14 @@ function makeFunc() {
 const myFunc = makeFunc();
 myFunc();
 ```
+
+## 동기와 비동기
+
+#### async - await
+1. async - 함수앞에 async를 붙이면 Promise를 반환합니다.
+2. await - 자바스크립트는 await 키워드를 만나면 프로미스가 처리될 때까지 기다립니다.
+
+#### Promise
+1. Promise 객체는 비동기 작업이 맞이할 미래의 완료 또는 실패의 결과 값을 나타냅니다.
+2. Promise.race() - Promise.race() 메서드는 Promise 객체를 반환합니다. 이프로미스 객체는 배열에 있는 프로미스중에 가장 먼저 완료된 것의 결과값을 그대로 이행하거나 거부합니다.
+3. Promise.all() - Promise.all()은 모든 프로미스가 처리되어야 다음 처리를 진행할 수 있습니다. 하나라도 거부되면 모두 거부됩니다.
