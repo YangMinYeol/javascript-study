@@ -160,11 +160,13 @@ console.log(bar); // true
 - 3번은 이벤트도 여러개 추가 가능하고 제거도 가능하여 권장한다.
 
 #### 버블링
+
 1. 이벤트가 상위 요소로 전파되는 단계
 2. 버블링을 중단하기 위해서는 stopProggation()을 사용해야한다.
-> 꼭 필요한 경우를 제외하고는 버블링을 중단해서는 안된다. why? stopProggation으로 버블링을 막은 영역은 분석이 제대로 되지 않기 때문입니다.
+   > 꼭 필요한 경우를 제외하고는 버블링을 중단해서는 안된다. why? stopProggation으로 버블링을 막은 영역은 분석이 제대로 되지 않기 때문입니다.
 
 #### 캡처링
+
 1. 이벤트가 하위 요소로 전파되는 단계
 
 ## Script
@@ -173,10 +175,51 @@ console.log(bar); // true
    > 하지만 노출이 쉽게되기때문에 신중하게 사용해야한다.
 
 ## 고급함수
+
 #### 순수 함수
+
 1. 입력값이 있고 항상 같은 값을 내는 함수이다.
 
 #### 부수 효과(Side Effect)
+
 1. 함수 내에서 어떤 구현이 함수 외부에 어떤 영향을 끼치는 경우 해당 함수는 Side Effect가 있다고 말한다.
 
 - 순수함수와 비순수함수(Side Effect가 포함된)는 함수명에서 유추 가능하도록 하면 좋다.
+
+#### 팩토리 함수
+
+1. 함수가 객체를 반환할때, 이 함수를 공장 함수 혹은 팩토리 함수라 부른다.
+
+#### 클로저
+
+1. 클로저는 주변 상태에 대한 참조와 함께 묶인 함수의 조합, 즉 클로저는 내부함수에서 외부함수의 범위에 대한 접근을 제공한다.
+   > 예제 1과 예제 2는 같은 결과를 만들어낸다.
+
+- 예제 1
+
+```
+function init() {
+  var name = "my"; // name은 init에 의해 생성된 지역 변수이다.
+  function displayName() {
+    // displayName() 은 내부 함수이며, 클로저다.
+    console.log(name); // 부모 함수에서 선언된 변수를 사용한다.
+  }
+  displayName();
+}
+init();
+```
+
+- 예제 2
+
+```
+function makeFunc() {
+  const name = "Mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;
+}
+
+const myFunc = makeFunc();
+myFunc();
+```
