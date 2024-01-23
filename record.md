@@ -317,4 +317,9 @@ myFunc();
 6. as를 통해 별칭을 지정할 수 있다.
    > import {myMember as member} from "my-module.js"
 
+#### globalThis
+
+1. 내보내기 한 모듈의 전역변수를 사용하고 싶을 경우 globalThis.전역변수를 사용하면 된다.
+   > globalThis는 전역 스코프의 this를 반환한다
+
 ✅ Import Export에 대한 기본 지식은 익혔지만 평상시 쓰지않았기때문에 조금 더 학습 할 필요가 있다.
