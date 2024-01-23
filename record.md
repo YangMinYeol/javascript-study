@@ -296,3 +296,25 @@ myFunc();
 1. XHR처럼 비동시 통신 메서드지만 xhr보다 뒤에 나왔으며 대체적으로 더 빠르다
 2. Fetch는 프로미스를 다루고 빠르다.
 3. 첫번째 인자로 URL 두번째 인자로 옵션을 받는다.
+
+## ✅Export와 Import
+
+#### Export
+
+1. export 문은 JavaScript 모듈에서 함수, 객체, 원시 값을 내보낼 때 사용한다.
+2. 내보내는 모듈은 "use strict"의 존재 유무와 상관없이 무조건 엄격 모드이다.
+
+#### Import
+
+1. 정적 import 문은 다른 모듈에서 내보낸 바인딩을 가져올 때 사용한다.
+2. 가져오는 모듈은 "use strict"의 존재 유무와 상관없이 무조건 엄격 모드이다.
+3. \*을 통해 모듈 전체를 가져올 수 있다.
+   > import \* as myModule from "my-module.js"
+4. 하나의 멤버만 가져올 수 있다.
+   > import {myMember} from "my-module.js"
+5. 여러 멤버들을 가져올 수 있다.
+   > import {foo, bar} from "my-module.js"
+6. as를 통해 별칭을 지정할 수 있다.
+   > import {myMember as member} from "my-module.js"
+
+✅ Import Export에 대한 기본 지식은 익혔지만 평상시 쓰지않았기때문에 조금 더 학습 할 필요가 있다.
