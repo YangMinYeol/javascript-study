@@ -395,3 +395,60 @@ myFunc();
 1. 미리 작성된 코드 그룹으로 작업을 하는데 도움을 줌
 2. 라이브러리를 사용하는 이유 why? 1. 개발 속도 증가 2. 안정성 향상
    > 집에 이미 만들어진 가구를 들이는것과 같다.
+
+## ⭐Symbol && Generator && Reflect API && Proxy API
+
+#### Symbol
+
+1. 생성자가 원시 값을 반환하는 내장 객체
+2. 고유함이 보장되어 다른코드와 충돌하지 않도록 할 때 많이 쓰인다.
+3. 캡슐화, 정보은닉을 제공한다.
+4. 매번 호출마다 새로운 심볼이 생성된다.
+
+```
+const sym1 = Symbol();
+const sym2 = Symbol("foo");
+const sym3 = Symbol("foo");
+```
+
+#### 제너레이터(Generator)
+
+1. 제너레이터를 만들려면 제너레이터 함수라 불리는 특별한 문법 구조 function\* 이 필요하다.
+
+```
+function* generate(){
+  yield 1;
+  yield 2;
+  return 3;
+}
+```
+
+2. 제너레이터 함수는 일반 함수와 동작 방식이다르다.
+   > 제너레이터 함수를 호출하면 코드가 실행되지않고 제네레이터 객체가 반환된다.
+3. next()를 호출 하면 가장 가까운 yield문을 만날때까지 실행된다.
+   > next()는 value:값, done: 함수실행이 끝났으면 true, 아니면 false를 반환한다.
+
+#### Reflect
+
+1. 객체를 다루는데 도움을 준다.
+2. Reflect를 쓰는 이유 why?
+   1. 문제가있을때 Object처럼 undefined처리가 아닌 문제를 알려준다.
+   2. 더 깔끔한 코드
+
+#### Proxy
+
+1. 객체에 대한 작업을 가로채고 새로 재정의 할 수 있다.
+2. 프록시할 원본 객체와 재정의할 객체를 매개변수로 받는다
+
+```
+const target = {
+  message1: "hello",
+  message2: "everyone",
+};
+
+const handler1 = {};
+
+const proxy1 = new Proxy(target, handler1);
+```
+
+⭐ Javascript 고급 부분이라 확 와닿지않는다. 사용할 기회가있으면 다시한번 공부가 필요하다
