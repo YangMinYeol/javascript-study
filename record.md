@@ -452,3 +452,22 @@ const proxy1 = new Proxy(target, handler1);
 ```
 
 ⭐ Javascript 고급 부분이라 확 와닿지않는다. 사용할 기회가있으면 다시한번 공부가 필요하다
+
+## Node.js
+
+1. chrome의 v8엔진을 이용하여 Javascript로 브라우조가 아니라 서버를 구축하고 서버에서 JavaScript가 작동되도록 해주는 런타임 환경(플랫폼)이다.
+
+#### require()
+
+1. require()메서드를 통해 외부 모듈을 가져올 수 있다.
+
+### Event
+
+1. on(event, listener) : 지정한 이벤트의 리스너를 추가
+2. once(event, listener) : 지정한 이벤트의 리스너를 추가하지만 한 번 실행한 후에는 자동으로 리스너 제거
+3. removeListener(event, listener) : 지정한 이벤트에 대한 리스너를 제거
+
+### Express.js
+
+1. node.js에서 웹서버와 웹애플리케이션을 쉽게 구축하게 도와준다.
+   > node.js를 사용하여 쉽게 서버를 구성할 수 있게 만든 클래스와 라이브러리의 집합체
