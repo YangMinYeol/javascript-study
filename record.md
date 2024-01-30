@@ -471,3 +471,24 @@ const proxy1 = new Proxy(target, handler1);
 
 1. node.js에서 웹서버와 웹애플리케이션을 쉽게 구축하게 도와준다.
    > node.js를 사용하여 쉽게 서버를 구성할 수 있게 만든 클래스와 라이브러리의 집합체
+
+## 보안
+
+1. 민감하고 보안에 중요한 코드는 클라이언트측 코드에 작성해서는 안된다.
+
+#### XSS (Cross Site Scripting)
+
+1. 제 3자가 악성 스크립트를 삽입하여 의도하지 않은 명령을 실행시키거나 세션등을 탈취할 수 있는 취약점이다.
+   > 예를들어 url에 <script> </script>를 이용하여 javascript코드를 이용해 정보를 가져올 수 있다.
+2. 종류 : Stored XSS, DOM Based XSS, Reflected XSS
+
+#### CSRF (Cross Site Request Forgery)
+
+1. 사이트간 요청 위조
+   > 예를들어 피싱 사이트에 접속했을 경우 이미 자동로그인된 Naver, Facebook같은 곳에서 광고성 혹은 유해한 게시글을 업로드한다.
+
+#### CORS (Cross-Origin Resource Sharing)
+
+1. 출처가 다른 리소스를 공유 한다.
+   > 예를들어 Naver에 접속하였는데 Naver에서 Naver Pay에 돈을 지불하는 요청을 호출하는 경우
+2. 이전 pug파일에서 infinite tree라이브러리를 사용할때 발생해서 iframe으로 대체한 경험이있다.
