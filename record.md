@@ -515,3 +515,18 @@ const proxy1 = new Proxy(target, handler1);
    1. 캐시란 다운로드 받은 데이터나 값을 미리 복사해 놓는 임시 장소
       > 같은 데이터를 여러번 요청하게되어 네트워크 리소스를 낭비를 줄여준다.
 5. 웹팩과 번들링
+
+## Test
+
+#### Test Runner
+
+1. 테스트 파일을 읽어 작성한 코드를 실행하고, 결과를 출력한다.
+
+#### Testing Framework
+
+1. 사용자가 테스트 코드를 작성할 수 있는 기반을 제공해주는 도구
+   > Mocha, Jasmine, AVA등
+
+#### Assertion library
+
+1. 테스트 코드에서 단언(assertion)은 테스트가 통과하기 위한 조건을 명확하게 기술하기 위해 사용
